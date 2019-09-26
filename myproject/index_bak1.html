@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>考拉海购</title>
+	<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+    /*首页顶部*/
+    #topNav{
+		width:100%;
+		height:31px;
+		background:#000;
+	}
+	#topNavWrap{
+		width:1090px;
+		height:30px;
+		margin:0 auto;
+		line-height:30px;
+		font-size:12px;
+		color:#999;
+     /*相对定位--为顶部右边的绝对定位设置*/
+		position:relative;
+	}
+	#topNavLeft{
+		float:left;
+		width:193px;
+		height:29px;
+	}
+    /*关于顶部的a标签  附加头部a标签*/
+	#topNavLeft a,#topNavLeft1 a,#topNavRight a,#searchul a {
+		text-decoration:none;
+		color:#999;
+		font-size:12px;
+	}
+	#topNavLeft .login{
+		margin:0 0 0 16px;
+	}
+	#topNavLeft .sep{
+		padding:0 10px;
+	}
+    #topNavLeft1{
+		float:left;
+		padding:0 0 0 30px;
+	}
+    /*顶部右边*/
+	#topNavRight{
+		width:596px;
+		height:32px;
+		float:left;
+		position:absolute;
+        right:0;
+	}
+	/*使用弹性布局，li并排，两端对齐* 附加头部ul样式*/
+    #topNavRight>ul,#searchul>ul{
+		list-style:none;
+		display:flex;
+		justify-content:space-around;
+		color:#999;
+	}
+    /*首页头部*/
+	#docHead{
+		width:100%;
+		height:100px;
+		background:#fff;
+	}
+	#docHeadWrap{
+		width:1090px;
+		height:100px;
+		margin:0 auto;
+		position:relative;
+	}
+	.logo{
+		width:330px;
+		height:65px;
+		cursor:pointer;
+		position:absolute;
+		left:0;top:20px;
+		background:url("./image/logo.png")no-repeat;
+	}
+    /*头部中间部分*/
+	.searchboxAndul{
+		width:511px;
+		height:64px;
+		position:absolute;
+		left:343px;top:20px;
+	}
+	#searchbox{
+		width:507px;
+		height:36px;
+		padding-left:1px;
+		border:2px solid #ff2337;
+		border-radius:40px;
+	}
+    #searchbox .search{
+		width:410px;
+		height:36px;
+		float:left;
+	}
+	#searchButton{
+		float:right;
+		display:inline-block;
+		height:36px;
+		width:70px;
+		border-radius:40px 36px 36px 40px;
+		background:linear-gradient(90deg,red,#ff3264);
+
+	}
+	#searchboxInput{
+		width:410px;
+        height:24px;
+		line-height:24px;
+		font-size:13px;
+		padding: 6px 39px 6px 30px;
+	}
+	#searchboxInput input{
+		width:408px;
+		height:19px;
+		border:0px;
+		outline:none;
+	}
+    #searchboxAndul>ul{
+		list-style:none;
+	}
+	#shoppingButton{
+		display:inline-block;
+		width:110px;
+		height:40px;
+		border:2px solid #ff2337;
+		border-radius:40px;
+		line-height:40px;
+		text-align:center;
+		font-size:14px;
+		text-decoration:none;
+		color:#000;
+		position:absolute;
+		top:20px;
+		right:76px;
+	}
+	#shoppingButton span{
+		padding-left:6px;
+	}
+    /*头部下方按钮*/
+    .topTabBox{
+		width:100%;
+		height:40px;
+	}
+	#tabBox{
+		width:1090px;
+		height:40px;
+		margin:0 auto;
+		line-height:40px;
+		border:1px solid #000;
+	}
+	#tabBoxleft{
+		float:left;
+		list-style:none;
+		font-size:12px;
+		font-weight:700;
+		color:#fff;
+		width:163px;
+		height:40px;
+		text-align:center;
+		border:1px solid #000;
+		
+	}
+	#tabBoxleft>li{
+		background:linear-gradient(90deg,red,#ff3264);
+		border-bottom:1px solid #ff5160;	
+	}
+	#tabBoxright{
+		float:left;
+		list-style:none;
+		padding:0 0 0 25px;
+		width:865px;
+		height:40px;
+		font-size:12px;
+		font-weight:700;
+        /*弹性布局*/
+		display:flex;
+		justify-content:space-around;
+	}
+	#tabBoxright a{
+		text-decoration:none;
+		color:#000;
+	}
+    /*首页动图*/
+	#picBox{
+		width:100%;
+		height:505px;
+		border:1px solid #000;
+	}
+	.showImg{
+		width:1920px;
+		height:505px;
+		border:1px solid #000;
+		margin:0 auto;
+		position:relative;
+	}
+    .showImg>ul{
+		width:1920px;
+		height:505px;
+	}
+	.showImg>ul>li{
+	    width:100%;
+		height:505px;
+		position:absolute;
+		top:0;left:0;
+	}
+    .showImg li:nth-of-type(1){
+		background:url("./image/index/01_img.jpg");
+		background-size:cover;
+		animation:name1 12s ease infinite alternate forwards;
+	}
+    .showImg li:nth-of-type(2){
+		background:url("./image/index/02_img.jpg");
+		background-size:cover;
+		animation:name2 12s ease infinite alternate forwards;
+	}
+    .showImg li:nth-of-type(3){
+		background:url("./image/index/03_img.jpg");
+		background-size:cover;
+		animation:name3 12s ease infinite alternate forwards;
+	}
+    .showImg li:nth-of-type(4){
+		background:url("./image/index/04_img.jpg");
+		background-size:cover;
+		animation:name4 12s ease infinite alternate forwards;
+	}
+    .showImg li:nth-of-type(5){
+		background:url("./image/index/05_img.jpg");
+		background-size:cover;
+		animation:name5 12s ease infinite alternate forwards;
+	}
+	@keyframes name1{
+		0%{opacity:1;}
+		25%{opacity:0;}
+		50%{opacity:0;}
+		75%{opacity:0;}
+		100%{opacity:0;}
+	}
+	@keyframes name2{
+		0%{opacity:0;}
+		25%{opacity:1;}
+		50%{opacity:0;}
+		75%{opacity:0;}
+		100%{opacity:0;}
+	}
+	@keyframes name3{
+		0%{opacity:0;}
+		25%{opacity:0;}
+		50%{opacity:1;}
+		75%{opacity:0;}
+		100%{opacity:0;}
+	}
+	@keyframes name4{
+		0%{opacity:0;}
+		25%{opacity:0;}
+		50%{opacity:0;}
+		75%{opacity:1;}
+		100%{opacity:0;}
+	}
+	@keyframes name5{
+		0%{opacity:0;}
+		25%{opacity:0;}
+		50%{opacity:0;}
+		75%{opacity:0;}
+		100%{opacity:1;}
+	}
+	</style>
+
+</head>
+<body>
+    <!-- 首页顶部 -->
+	<nav id="topNav">
+		<div id="topNavWrap">
+            <!--顶部左边-->
+			<div id="topNavLeft">
+				<span>考拉欢迎你!</span>
+				<a  class="login" href="login.html">登录</a>
+				<span class="sep">|</span>
+				<a target="_blank" href="login.html"">免费注册</a>
+			</div>
+			<div id="topNavLeft1">
+				<a  class="app" href="">手机考拉</a>
+			</div>
+			<div id="topNavRight">
+				<ul>
+				     <li>
+					     <a href="">每日签到</a>
+				     </li>
+				     <li>
+					<a href="">我的订单</a>
+				    </li>
+				    <li>
+					    <div>
+						     <a href="">个人中心
+							<i></i>
+							</a>
+							<div></div>
+							</div>
+				    </li>
+					<li>
+						<div>
+							<a href="">客户服务
+							<i></i>
+							</a>
+							<div></div>
+						</div>
+					</li>
+				    <li>
+						<div>
+							<a href="">充值中心
+							<i></i>
+							</a>
+							<div></div>
+							</div>
+					</li>
+					<li>
+						<div>
+							<a href="">消费者权益
+							<i></i>
+							</a>
+							<div></div>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a href="">更多
+							<i></i>
+							</a>
+							<div></div>
+						</div>
+					</li>
+			    </ul>
+		    </div>
+		</div>
+	</nav>
+	<header id="docHead">
+		<div id="docHeadWrap">
+			<a href="" class="logo" title="考拉海购"></a>
+			<div class="searchboxAndul">
+				<div id="searchbox">
+					<div class="search">
+					    <span id="icon"></span>
+						<div id="searchboxInput">
+							<input type=""  placeholder="阿迪达斯">
+						</div>
+					</div>
+					<span id="searchButton"></span>
+				</div>
+				<div id="searchul">
+					<ul>
+						<li>
+							<a href="">面膜</a>
+						</li>
+						<li>
+							<a href="">口红</a>
+						</li>
+						<li>
+							<a href="">减肥</a>
+						</li>
+						<li>
+							<a href="">全球工厂店</a>
+						</li>
+						<li>
+							<a href="">运动鞋</a>
+						</li>
+						<li>
+							<a href="">项链</a>
+						</li>
+						<li>
+							<a href="">女包</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<a href="" id="shoppingButton">
+				<i></i>
+				<span>购物车</span>
+			</a>
+		</div>
+	</header>
+	<div class="topTabBox">
+		<div id="tabBox">
+			<ul id="tabBoxleft">
+				<li>所有分类</li>
+				<li>美容彩妆</li>
+				<li>母婴儿童</li>
+				<li>营养保健</li>
+				<li>数码家电</li>
+				<li>个人洗护</li>
+				<li>服饰鞋靴</li>
+				<li>运动户外</li>
+				<li>手表配饰</li>
+				<li>轻奢</li>
+				<li>家居生活</li>
+				<li>环球美食</li>
+			</ul>
+			<ul id="tabBoxright">
+				<li><a href="">首页</a></li>
+				<li><a href="">今日限时购</a></li>
+				<li><a href="">每日上新</a></li>
+				<li><a href="">国家馆</a></li>
+				<li><a href="">海外旗舰店</a></li>
+				<li><a href="">工厂店</a></li>
+				<li><a href="">品质奶粉</a></li>
+				<li><a href="">人气面膜</a></li>
+				<li><a href="">充值</a></li>
+			</ul>
+		</div>
+		<section id="picBox">
+			<div class="showImg">
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+			</div>
+		</section>
+	</div>
+</body>
+</html>

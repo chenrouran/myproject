@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录-网易考拉</title>
+	<style>
+		*{margin:0;padding:0;}
+        /*页面头部*/
+		.head{
+			width:100%;
+			height:101px;
+			background:#fff;
+
+		}
+		.head .head_logo{
+			width:1000px;
+			height:100px;
+			margin:0 auto;
+			position:relative;
+		}
+		.head .head_logo .head_left{
+			width:330px;
+			height:65px;
+			position:absolute;
+			top:50%;
+			left:0;
+			margin-top:-32.5px;
+		}
+		.head .head_logo .head_right{
+			width:504px;
+			height:100px;
+			position:absolute;
+			top:0px;
+			right:0px;
+		}
+         /*页面中间部分*/
+		.content{
+			width:100%;
+			height:600px;
+			background:#f8f8f8;
+		}
+		.content .content_body{
+			width:1000px;
+			height:100%;
+			margin:0 auto;
+			position:relative;
+		}
+		.content .content_body .content_left{
+			width:400px;
+			height:360px;
+			position:absolute;
+			top:50%;
+			left:0px;
+			margin-top:-180px;
+			background:url("./image/login_bodyimage.png") no-repeat;
+			background-position:center;
+		}
+        /*登录框部分 .content_right*/
+		.content .content_body .content_right{
+			border:1px solid #eaeaea;
+			width:350px;
+			height:365px;
+			position:absolute;
+			top:50%;
+			right:40px;
+			margin-top:-182.5px;
+		}
+        /*登录框头部 .content_right_top*/
+		.content_right .content_right_top{
+			width:100%;
+			height:51px;
+			border-bottom:1px solid #eaeaea;
+			cursor:pointer;
+
+		}	
+        .content_right_top .top1,.top2{
+			width:170px;
+			height:51.64px;
+			float:left;
+			font-size:16px;
+			font-weight:bold;
+			line-height:51px;
+			text-align:center;
+		}
+		.content_right_top .top1:hover{color:#e31436;}
+		.content_right_top .top2:hover{color:#e31436;}
+		.content_right_top .link{
+			width:0px;
+			height:20px;
+			float:left;
+			color:#ddd;
+			line-height:51px;	
+		}
+        /*登录框中间部分*/
+		.content_right .content_right_center{
+			width:100%;
+			height:273px;
+			background:#fff;
+			padding:20px 40px;
+			box-sizing:border-box;
+		}
+        .content_right_center_a{
+			width:270px;
+			height:14px;
+			line-height:14px;
+			margin:0 0 10px;
+
+		}
+        .content_right_center_a>a,.unlogin>a{
+			color:#666;
+			font-size:12px;
+			text-decoration:none;
+			float:right;
+		}
+		.content_right_center_input1,.content_right_center_input2{
+			width:100%;
+			height:36px;
+			border:1px solid #eaeaea;
+			margin-bottom:15px;
+		}
+		.content_right_center_input2>input,.content_right_center_input1>input {
+			line-height:37px;
+			width:165px;
+			height:36px;
+			border:0;
+			outline:none;
+			padding:0 0 0 8px;
+		}
+        /*登录按钮*/
+		.content_right_center_button>button{
+			width:100%;
+			height:36px;
+			margin:5px 0 10px;
+			background:#E31436;
+			color:#fff;
+			font-size:14px;
+			outline:none;
+			border:none;
+		}
+		.content_right_center_b{
+			width:100%;
+			height:16px;
+			margin:0 0 15px;
+		}
+		.content_right_center_c{
+			width:100%;
+			height:18px;
+		}
+		.unlogin .checkbox{
+			display:block;
+			float:left;
+			width:14px;
+			height:14px;
+			cursor:pointer;
+			border:solid 1px #aaa;
+			color:#999;
+			font-size:12px;
+		}
+		.unlogin>label{display:block;float:left;}
+		.unlogin>label,.policy>span,.policy>span>a{
+			font-size:12px;
+			color:#666;
+		}
+		.content_right_center .code{
+			display:block;
+			float:right;
+			height:37px;
+			width:96px;
+			text-decoration:none;
+			line-height:32px;
+			font-size:14px;
+			text-align:center;
+			background-color:#eee;
+			color:#333;
+			border-left:1px solid #d5d5d5; 
+		}
+        /*登录框底部  .content_right_foot*/
+		.content_right .content_right_foot{
+			width:100%;
+			height:41px;
+			border-top:1px solid #eaeaea;
+			padding:9px 40px;
+			box-sizing:border-box;
+		}
+		.content_right .content_right_foot>ul{
+			width:130px;
+            display:block;
+			list-style:none;
+			float:left;
+			padding-right:30px;
+			display:flex;
+			justify-content:space-between; 
+		}
+		.content_right .content_right_foot>ul>li{
+			width:22px;
+			height:22px;
+			padding:2px;
+			box-sizing:border-box;
+		}
+        .content_right .content_right_foot>a{
+		    display:block;
+			box-sizing:border-box;
+			width:110px;
+			height:22px;
+			color:#e31436;
+			text-decoration:none;
+			font-size:16px;
+			float:right;
+			line-height:28px;
+		}
+        /*页面底部*/
+		.foot{
+			width:100%;
+			height:151px;
+			background:#fff;
+		}
+		.foot div{
+      	    height:150px;
+			padding:20px 0px;
+			text-align:center;
+		    font-size:12px;
+			color:#999;
+		}
+		.foot .foot_content>a{
+			color:#999;
+			text-decoration:none;
+		}
+        /*登陆框底部雪碧图*/
+		.content_right_foot>ul>li>a{
+            text-decoration:none;
+			height:22px;
+			width:22px;
+		    display:block;
+		    background:url("./image/login_sprites.png")no-repeat;
+		}
+		#f1 a{
+				background-position: -760px -401px;
+			}
+		#f2 a{
+				background-position: -792px -401px;
+			}
+		#f3 a{
+				background-position: -824px -401px;
+			}
+		#f4 a{
+				background-position: -856px -401px;
+			}
+	</style>
+</head>
+<body>
+	<header class="head">
+		<div class="head_logo">
+			<div class="head_left">
+			<a href="" class="logo"><img src="./image/logo.png"" alt=""></a>
+			</div>
+			<div class="head_right">
+			<img src="./image/u_login_topimage.png" alt="">
+			</div>
+			
+		</div>
+	</header>
+	<section class="content" >
+		<div class="content_body">
+			<div class="content_left"><a href=""></a></div>
+			<div class="content_right">
+				<div class="content_right_top">
+					<div class="top1">手机号登陆</div>
+					<span class="link">|</span>
+					<div class="top2">邮箱登陆</div>
+				</div>
+				<div class="content_right_center">
+					<div class="content_right_center_a">
+						<a id="a1" href="">使用密码验证登陆</a>
+					</div>
+					<div class="content_right_center_input1">
+						<input type="" placeholder="请输入手机号码">
+					</div>
+					<div class="content_right_center_input2">
+						<input type="" placeholder="请输入短信验证码">
+						<a class="code" href="">获取验证码</a>
+					</div>
+				    <div class="content_right_center_button"><button>登陆</button></div>
+					<div class="content_right_center_b">
+						<div class="unlogin">
+							<span class="checkbox"></span>
+							<label for="">10天免登陆</label>
+							<a href="">遇到问题？</a>
+						</div>
+					</div>
+					<div class="content_right_center_c">
+						<div class="policy">
+						    <span>登陆即代表您已同意<a href="">“隐私权相关政策”</a></span>
+						</div>
+					</div>
+				</div>
+				<div class="content_right_foot">
+                    <ul class="content_right_foot_f">
+                    	<li id="f1"><a href=""></a></li>
+                    	<li id="f2"><a href=""></a></li>
+                    	<li id="f3"><a href=""></a></li>
+                    	<li id="f4"><a href=""></a></li>
+                    </ul>
+					<a href="">手机快捷登陆</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="foot">
+	    <div class="foot_content">
+			<a href="">隐私政策</a>
+			<span>-</span>
+			<a href="">考拉海购</a><br>
+			<span>增值电信业务营业许可证：浙B2-20160288</span>
+			<a href="">自营经营者信息</a>
+			<span>（浙）网械平台备字[2018]第00007号</span><br>
+			<img src="./image/login_footer01.png" alt="">
+			<span>阿里巴巴版权所有©2003-2019</span>
+			<span>互联网药品信息服务资格证书编号（浙）-2017-0027</span>
+			<span>浙ICP备16011229号-6</span><br>
+			<img src="./image/login_footer02.png" alt="">
+			<img src="./image/login_footer03.png" alt="">
+			<img src="./image/login_footer04.gif" alt="">
+		</div>
+	</footer>
+</body>
+</html>
